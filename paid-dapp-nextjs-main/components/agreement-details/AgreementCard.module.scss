@@ -1,0 +1,50 @@
+.container {
+  padding: 20px;
+
+  word-wrap: break-word;
+  background: #ffffff;
+  box-shadow: 0px 20px 40px #d0d6e8;
+  border-radius: 10px;
+
+  h4 {
+    margin: unset;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 25px;
+    /* Secondary */
+    color: #34286c;
+  }
+
+  dl {
+    margin: unset;
+  }
+
+  dt {
+    margin-top: 20px;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    /* Gray */
+    color: #bfbec5;
+  }
+
+  dd {
+    margin-top: 15px;
+    margin-left: 10px;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* Secondary */
+    color: #34286c;
+  }
+}

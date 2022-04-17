@@ -1,0 +1,37 @@
+.table {
+  width: 100%;
+
+  th,
+  td {
+    padding: 21px 15px;
+  }
+
+  th {
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #1a1e3c;
+  }
+
+  td {
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 21px;
+    color: #110252;
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background: #ffffff;
+        border-radius: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@use 'sass/theme/variable' as theme;
+
+.editable {
+  display: flex;
+  margin-bottom: 30px;
+
+  // UX: Items can be pressed
+  cursor: pointer;
+
+  > h3 {
+    // Layout
+    margin-right: 10px;
+    margin-bottom: unset;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 43px;
+    letter-spacing: -0.02em;
+    color: #110252;
+  }
+}
+
+.static {
+  margin-bottom: 30px;
+  h3 {
+    color: theme.$blue;
+  }
+}

@@ -1,0 +1,85 @@
+@use 'sass/mixins';
+
+@mixin pageLayout {
+  display: flex;
+  flex-flow: column nowrap;
+
+  > header {
+    flex: 0;
+  }
+
+  > section {
+    flex: 1;
+  }
+}
+
+.container {
+  padding: 40px 0px;
+  height: 100%;
+
+  @include pageLayout();
+
+  h3 {
+    // Copied from figma
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 43px;
+    letter-spacing: -0.02em;
+    /* Primary Color */
+    color: #110252;
+  }
+
+  > section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.card {
+  // Outer Layout
+  flex-basis: 526px;
+
+  // Inner layout
+  padding: 30px 20px;
+
+  background: #ffffff;
+  box-shadow: 0px 20px 40px #d0d6e8;
+  border-radius: 10px;
+
+  h4 {
+    text-align: center;
+
+    // Copied from figma
+    font-style: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #110252;
+  }
+
+  > article {
+    padding: 35px 0px;
+
+    // Copied from figma
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    /* Primary Color */
+    color: #110252;
+  }
+
+  > footer a {
+    // Outer layout
+    height: 38px;
+    width: 100%;
+
+    // Inner Layout
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    @include mixins.coloredButton;
+  }
+}

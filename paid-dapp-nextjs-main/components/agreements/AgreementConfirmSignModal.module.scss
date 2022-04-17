@@ -1,0 +1,115 @@
+@use 'sass/mixins';
+
+.container :global(.modal-body) {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 30px;
+  width: 617px;
+
+  button:disabled:hover {
+    background-image: linear-gradient(to right, #da1e5e, #f69322);
+  }
+
+  > header {
+    // Layout
+    padding-bottom: 30px;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: left;
+
+    /* Primary Color */
+    color: #110252;
+  }
+
+   p {
+    // Layout
+    // Copied from Figma:
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 450 !important;
+    font-size: 14px !important;
+    line-height: 17.71px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: flex-end;
+
+    /* Primary Color */
+    color: #110252;
+  }
+
+  .nohover {
+    pointer-events: none;
+  }
+
+  .checkBoxContainer {
+    display: flex;
+
+     > input {
+      margin-right: 4px;
+    }
+
+    .checkbox{
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      background: #fff;
+
+      border: 1px solid rgba(0, 0, 0, 0.2);;
+      cursor: pointer;
+    }
+    .checkbox:checked{
+      background-image: url('/assets/images/check-box-checked.png');
+      background-size: 12px;
+      border: none;
+      // background-image: linear-gradient(to right, #da1e5e, #f69322);
+    }
+  }
+
+  a {
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #da1e5e, #f69322);
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+ }
+ 
+ 
+ a::after {
+    content:'';
+    width:100%;
+    position: absolute;
+    left:3px;
+    bottom:1px;
+    height: 1px;
+    background: -webkit-linear-gradient(to right, #da1e5e, #f69322);
+    background: linear-gradient(to right, #da1e5e, #f69322);
+ }
+
+  .dismissButton {
+    @include mixins.secondaryButton(#fff);
+  }
+
+  .modalActions {
+    padding-top: 30px;
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+    margin: -10px;
+
+    button {
+      margin: 10px;
+      width: 266px;
+    }
+  }
+}

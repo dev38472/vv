@@ -1,0 +1,18 @@
+.container {
+  margin-bottom: 0px;
+
+  // Fix for the search icon not being centered.
+  &:global(.has-search) :global(.search-icon) {
+    top: 14px;
+  }
+
+  ::placeholder {
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 24px;
+    color: #b1b0c1;
+  }
+}

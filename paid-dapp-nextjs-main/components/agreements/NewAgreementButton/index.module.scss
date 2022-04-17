@@ -1,0 +1,36 @@
+.container {
+  // Special styles copied from Figma
+  padding: 10px 15px;
+  background: linear-gradient(
+    94.47deg,
+    rgba(218, 30, 94, 0.7) 6.1%,
+    rgba(246, 147, 34, 0.7) 93.62%
+  );
+  box-shadow: 0px 5px 10px rgba(218, 30, 94, 0.3), inset 0px 5px 7px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+
+  // Inner Layout
+  display: flex;
+  flex-flow: row nowrap;
+
+  // Fix for Bootstrap clashing CSS
+  height: auto;
+  width: auto;
+
+  // Button Label
+  > label {
+    padding-left: 8px;
+    margin: 0px;
+    flex: 1;
+
+    // Text Styles copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
+}

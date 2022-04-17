@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/pdComponents": ["components/reusable/"],
+      "@/pages/*" : ["sass/module/pages/*"],
+      "@/models/*" : ["models/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/utils/*": ["utils/*"],
+      "@/redux/*": ["redux/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "pages/_app.tsx", "pages/agreements.ssx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,34 @@
+.container {
+  height: 100%;
+  padding: 40px;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  // represents the Page Header
+  > header h3 {
+    font-family: Circular Std;
+    font-style: normal;
+    font-size: 34px;
+    line-height: 43px;
+    letter-spacing: -0.02em;
+    color: #110252;
+  }
+
+  // Represents the Agreement's title and status
+  > section {
+    padding-top: 60px;
+  }
+
+  // Represents the container for the agreement itself.
+  > article {
+    padding-top: 30px;
+    flex: 1;
+  }
+
+  // Represents the button bar
+  footer {
+    //Outer Layout
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,21 @@
+@use 'sass/theme/_variable' as variable;
+
+.track {
+  background: variable.$grey-200;
+  height: 100%;
+  border-radius: 10px;
+  width: 5px;
+  right: 5px;
+}
+
+.thumb {
+  background: #8339A1;
+  border-radius: 10px;
+  width: 5px;
+  height: 50px;
+}
+
+.content {
+  padding-right: 30px;
+  background-color: transparent;
+}

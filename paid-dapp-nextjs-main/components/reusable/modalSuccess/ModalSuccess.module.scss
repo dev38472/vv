@@ -1,0 +1,44 @@
+@use 'sass/mixins';
+
+.container :global(.modal-body) {
+  padding: 35px;
+  display: flex;
+  flex-flow: column nowrap;
+
+  > header {
+    margin-top: 25px;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    /* Primary Color */
+    color: #110252;
+  }
+
+  > article {
+    margin-top: 30px;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    /* Primary Color */
+    color: #110252;
+  }
+
+  > button {
+    // Layout
+    margin-top: 30px;
+    padding: 10px 15px;
+    width: 100%;
+
+    @include mixins.coloredButton;
+  }
+}

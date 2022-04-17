@@ -1,0 +1,9 @@
+node_modules
+build
+.dockerignore
+Dockerfile
+.circleci
+k8s
+.env
+.gitignore
+.vscode

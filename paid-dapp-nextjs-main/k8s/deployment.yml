@@ -1,0 +1,51 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paid-dapp-nextjs
+  labels:
+    app: dapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dapp
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: dapp
+    spec:
+      containers:
+        - image: gcr.io/paid-network-202104/paid-dapp-nextjs:main-latest
+          imagePullPolicy: Always
+          name: dapp
+          env:
+            - name: SENTRY_DSN
+              valueFrom:
+                configMapKeyRef:
+                  name: paid-dapp-nextjs
+                  key: sentry-dns
+            - name: SENTRY_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: paid-dapp-nextjs
+                  key: sentry-url
+            - name: SENTRY_ORG
+              valueFrom:
+                configMapKeyRef:
+                  name: paid-dapp-nextjs
+                  key: sentry-org
+            - name: SENTRY_PROJECT
+              valueFrom:
+                configMapKeyRef:
+                  name: paid-dapp-nextjs
+                  key: sentry-project
+            - name: SENTRY_AUTH_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  name: paid-dapp-nextjs
+                  key: sentry-token
+          ports:
+            - containerPort: 3000

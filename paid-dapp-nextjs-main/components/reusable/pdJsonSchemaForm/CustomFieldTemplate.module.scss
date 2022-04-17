@@ -1,0 +1,59 @@
+.container {
+  div .panel-danger {
+    display: none;
+  }
+
+  // TODO: find a way to prevent the form's title from appearing
+  legend[id='root__title'] {
+    display: none;
+  }
+
+  label {
+    margin-top: 20px;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #34286c;
+  }
+
+  input,
+  textarea,
+  select {
+    background: linear-gradient(115.41deg, #f5f9fc 12.05%, #edf2fe 100%);
+    border-radius: 20px;
+    border: none;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #34286c;
+
+    &::placeholder {
+      // Copied from Figma
+      font-family: Circular Std;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #bfbec5;
+    }
+  }
+
+  :global(.field-description) {
+    padding-top: 5px;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 18px;
+    /* Gray */
+    color: #bfbec5;
+  }
+}

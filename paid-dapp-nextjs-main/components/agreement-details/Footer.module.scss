@@ -1,0 +1,30 @@
+@use "sass/mixins";
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+
+  button {
+    height: 35px;
+    min-width: 150px;
+    margin-left: 16px;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    &.primary {
+      @include mixins.coloredButton;
+    }
+
+    &:not(.primary) {
+      @include mixins.secondaryButton(#edf2fe);
+    }
+  }
+}

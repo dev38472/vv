@@ -1,0 +1,59 @@
+.container {
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 20px 40px #d0d6e8;
+  border-radius: 10px;
+
+  .signed {
+    color: green;
+    text-transform: uppercase;
+  }
+
+  .declined {
+    color: red;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    margin: unset;
+
+    font-family: Circular Std;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 25px;
+    /* Dark Color */
+    color: #1a1e3c;
+  }
+
+  dl {
+    margin-top: 52px;
+    margin-bottom: unset;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 8px;
+    row-gap: 24px;
+  }
+
+  dt {
+    grid-column: 1;
+
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    /* Gray */
+    color: #bfbec5;
+  }
+
+  dd {
+    grid-column: 2;
+
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

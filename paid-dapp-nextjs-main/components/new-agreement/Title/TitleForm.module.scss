@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  margin-bottom: 30px;
+
+  > input {
+    flex: 3;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    background: white;
+    border-radius: 15px;
+    color: black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    border: none;
+    outline: white;
+  }
+}
+
+.button {
+  flex: 1;
+  margin-left: 8px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background: white;
+
+  > * {
+    height: 100%;
+  }
+}

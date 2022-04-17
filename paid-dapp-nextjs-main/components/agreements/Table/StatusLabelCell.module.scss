@@ -1,0 +1,37 @@
+.container {
+  > * {
+    padding: 5px 8px;
+    border-radius: 10px;
+    width: 80px;
+
+    text-transform: capitalize;
+    text-align: center;
+
+    // Font settings copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.pending {
+  background: rgba(1, 126, 250, 0.2);
+  color: #017efa;
+}
+
+.signed {
+  background: rgba(72, 188, 51, 0.2);
+  color: #48bc33;
+}
+
+.draft {
+  background: rgba(132, 63, 160, 0.2);
+  color: #8339a1;
+}
+
+.declined {
+  background: rgba(218, 30, 94, 0.2);
+  color: #da1e5e;
+}

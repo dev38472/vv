@@ -1,0 +1,48 @@
+.container {
+  // Copied styles from Figma
+  padding: 10px 15px 10px 20px;
+  background: #ffffff;
+  box-shadow: 0px 20px 40px #d0d6e8;
+  border-radius: 10px;
+
+  // Inner Layout
+  display: grid;
+  grid-template-areas:
+    'icon title'
+    'icon subtitle';
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 15px;
+
+  // Used for the "button" effect
+  cursor: pointer;
+  transition: 0.25s ease-out background;
+  &.selected {
+    background: #ccc;
+  }
+
+  > div {
+    grid-area: icon;
+  }
+
+  > header {
+    grid-area: title;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #a09c9c;
+  }
+
+  > article {
+    grid-area: subtitle;
+
+    font-family: 'Open Sauce One';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    color: #34286c;
+  }
+}

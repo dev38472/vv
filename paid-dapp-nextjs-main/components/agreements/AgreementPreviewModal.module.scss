@@ -1,0 +1,41 @@
+.modalPreview {
+  max-width: 1000px;
+  width: 100%;
+  .modalBody {
+    text-align: center;
+    padding: 2.5rem 3.25rem;
+  }
+}
+
+.inlineIcon {
+  display: inline-flex;
+}
+
+.iconMargin {
+  margin-top: 3%;
+}
+
+.tooltipAgreement::before {
+  opacity: 0.5;
+}
+
+.tooltipAgreement {
+  background: #ffffff;
+  box-shadow: 0px 20px 40px #d0d6e8;
+  border-radius: 10px;
+  height: 100%;
+  padding: 15px 27px;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  color: #110252;
+}
+
+.tooltip-inner{
+  max-width: 280px !important;
+}

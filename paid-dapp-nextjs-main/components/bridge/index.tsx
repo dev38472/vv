@@ -1,0 +1,1 @@
+export { BinanceChainPage } from "./BinanceChainPage";

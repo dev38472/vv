@@ -1,0 +1,46 @@
+// Values Copy-pasted from Figma
+.container {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+
+  > header {
+    flex: 1;
+  }
+
+  > * {
+    flex: 0;
+  }
+}
+
+.button {
+  padding: 0px 20px;
+  > button {
+    width: max-content;
+  }
+}
+
+.search {
+  flex-basis: 300px;
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: 450;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+
+  color: #bfbec5;
+}
+
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 43px;
+  /* identical to box height */
+  letter-spacing: -0.02em;
+
+  color: #110252;
+}

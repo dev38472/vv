@@ -1,0 +1,7 @@
+// UX: the "title" cell can be pressed.
+.title {
+  cursor: pointer;
+  &:hover {
+    background-color: #eee;
+  }
+}

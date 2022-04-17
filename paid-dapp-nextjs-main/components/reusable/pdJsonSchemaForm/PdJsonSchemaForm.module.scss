@@ -1,0 +1,215 @@
+@use 'sass/mixins';
+
+$backgroundColor: #ffffff;
+
+// Overrides for the Bootstrap Progress component
+@mixin progressbarOverrides {
+  :global(.progress) {
+    height: 5px;
+    margin-bottom: 15px;
+  }
+
+  // TODO: Define this color in the bootstrap themes so that the component
+  // can get it without this override
+  :global(.progress-bar) {
+    background: #f69322;
+  }
+}
+
+.container {
+  background: $backgroundColor;
+  box-shadow: 0px 20px 40px #d0d6e8;
+
+  // Outer Layout
+  height: 100%;
+  border-radius: 10px;
+
+  // Inner Layout
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @include progressbarOverrides;
+
+  > header {
+    margin-bottom: 20px;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #34286c;
+  }
+
+  > article {
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #110252;
+  }
+
+  // NOTE: The Submit Button and the Back Button
+  // are in two different flexboxes, and this snippet
+  // targets them both.
+  button {
+    margin-top: 16px;
+    flex: 0 0 38px;
+  }
+
+  form {
+    flex: 1;
+
+    // Inner Layout
+    display: flex;
+    flex-flow: column nowrap;
+    > :global(.form-group) {
+      flex: 1;
+    }
+  }
+}
+
+.buttonPrimary {
+  @include mixins.coloredButton;
+}
+
+.buttonSecondary {
+  @include mixins.secondaryButton($backgroundColor);
+}
+
+.subTitle {
+  margin-top: 15px;
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #BFBEC5;
+}
+
+.modalHeader {
+  .title {
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    /* Primary Color */
+
+    color: #110252;
+  }
+  border-bottom: transparent;
+}
+
+.inventionForm {
+  flex: 1;
+
+  // Inner Layout
+  display: flex;
+  flex-flow: column nowrap;
+  > :global(.form-group) {
+    flex: 1;
+  }
+}
+
+.modalActions {
+  padding-top: 30px;
+  flex-flow: row;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.addBtn,
+.addBtn:focus {
+  margin-left: 15px;
+  color: white;
+  background: linear-gradient(
+    94.47deg,
+    rgba(218, 30, 94, 0.7) 6.1%,
+    rgba(246, 147, 34, 0.7) 93.62%
+  );
+  box-shadow: 0px 5px 10px rgba(218, 30, 94, 0.3),
+    inset 0px 5px 7px rgba(255, 255, 255, 0.2);
+  border: 0;
+}
+
+.addBtn:hover {
+  color: white;
+  background-color: #E8E8F8;
+}
+
+.addBtn:active {
+  color: white;
+  background: linear-gradient(94.47deg, #da1e5e 6.1%, #f69322 93.62%);
+  box-shadow: none;
+}
+
+.inventionRow {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+
+  .inventionTitle {
+    margin-left: 25px;
+    align-self: center;
+    flex-grow: 1;
+  }
+
+  .edit {
+    margin-right: 25px;
+    width: auto;
+    height: 24px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .delete {
+    margin-right: 27px;
+    width: auto;
+    height: 24px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.inventionsActionContainer {
+  flex: 1 0 auto;
+  position: relative;
+
+  .addInventionContainer {
+    display: block;
+    flex: 1 0 auto;
+  
+    .buttonAddNew {
+      font-family: Circular Std;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      background: linear-gradient(to right, #da1e5e, #f69322);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border: 0px;
+      float: right;
+    }
+  }
+
+  .btnNext {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 38px;
+    margin-left: 0px;
+  }
+}

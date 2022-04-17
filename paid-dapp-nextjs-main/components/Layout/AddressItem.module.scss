@@ -1,0 +1,13 @@
+.account {
+  display: flex;
+  width: 100%;
+  padding-right: 15px; // This line will likely have to be removed in a redesign.
+
+  span {
+    flex: 1;
+  }
+
+  .separator {
+    flex-basis: 25px;
+  }
+}

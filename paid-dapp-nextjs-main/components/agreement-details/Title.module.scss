@@ -1,0 +1,75 @@
+.container {
+  display: grid;
+  grid-template:
+    'title label .' 1fr
+    'subtitle subtitle subtitle' 1fr
+    / auto auto 1fr;
+  gap: 15px;
+
+  > h3 {
+    grid-area: title;
+    margin: unset;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 25px;
+    font-size: 20px;
+    /* Secondary */
+    color: #34286c;
+  }
+
+  > .label {
+    grid-area: label;
+
+    > * {
+      padding: 5px 8px;
+      border-radius: 10px;
+      width: 80px;
+
+      text-transform: capitalize;
+      text-align: center;
+
+      // Font settings copied from Figma
+      font-family: Circular Std;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  > p {
+    grid-area: subtitle;
+    margin: unset;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 18px;
+    /* Dark Color 50% */
+    color: #878a9a;
+    opacity: 0.5;
+  }
+}
+
+.pending {
+  background: rgba(1, 126, 250, 0.2);
+  color: #017efa;
+}
+
+.signed {
+  background: rgba(72, 188, 51, 0.2);
+  color: #48bc33;
+}
+
+.draft {
+  background: rgba(132, 63, 160, 0.2);
+  color: #8339a1;
+}
+
+.declined {
+  background: rgba(218, 30, 94, 0.2);
+  color: #da1e5e;
+}

@@ -1,0 +1,56 @@
+@use 'sass/mixins';
+
+.container :global(.modal-body) {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 34px;
+
+  > svg {
+    height: 58px;
+    width: 58px;
+  }
+
+  > header {
+    // Layout
+    margin-top: 20px;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* Secondary */
+    color: #34286c;
+  }
+
+  > article {
+    // Layout
+    padding-top: 30px;
+
+    // Copied from Figma
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* Primary Color */
+    color: #110252;
+  }
+
+  > button {
+    // Layout
+    margin-top: 30px;
+    padding: 10px 15px;
+    width: 100%;
+
+    @include mixins.coloredButton;
+  }
+}
